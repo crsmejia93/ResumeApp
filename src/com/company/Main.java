@@ -7,9 +7,9 @@ public class Main {
 	    Education edu1 = new Education("BS", "Psychology", "UMD", "2002");
 	    Education edu2 = new Education("MS", "Software Engineering", "Johns Hopkins U", "2005");
 	    Experience exp1 = new Experience("Amtrak","Software Developer II","June 2015",
-                "Present", "The description of this job.");
+                "Present", "Lorem ipsum", "Gaudeamos Igitur Iuvenes");
 	    Experience exp2 = new Experience("Amtrak","Software Developer 1", "June 2014",
-                "June 2015", "Some description of this job.");
+                "June 2015", "Lorem ipsum","Gaudeamos Igitur ");
 	    Skill java = new Skill("Java","Advanced");
         Skill php = new Skill("PHP","Intermediate");
         Skill ruby = new Skill("Ruby on Rails","Novice");
