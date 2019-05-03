@@ -81,6 +81,6 @@ public class Experience{
     @Override
     public String toString(){
         return getJobTitle()+"\n"+getCompany()+
-                ", "+getStartDate()+"-"+getEndDate()+"\n"+getDescriptionList()+"\n";
+                ", "+getStartDate()+"-"+getEndDate()+"\n"+getDescriptionList();
     }
 }
