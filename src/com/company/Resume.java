@@ -9,6 +9,9 @@ public class Resume {
     private ArrayList<Experience> experiences = new ArrayList<>();
     private ArrayList<Skill> skills = new ArrayList<>();
 
+    public Resume() {
+    }
+
     public Resume(String name, String email) {
         this.name = name;
         this.email = email;
@@ -34,24 +37,24 @@ public class Resume {
         educationList.add(edu);
     }
 
-    public String getEducation(int i){
-        return educationList.get(i).toString();
+    public Education getEducation(int i){
+        return educationList.get(i);
     }
 
     public void addExperiences(Experience ex){
         experiences.add(ex);
     }
 
-    public String getExperience(int i){
-        return experiences.get(i).toString();
+    public Experience getExperience(int i){
+        return experiences.get(i);
     }
 
     public void addSkill(Skill skill){
         skills.add(skill);
     }
 
-    public String getSkill(int i){
-        return skills.get(i).toString();
+    public Skill getSkill(int i){
+        return skills.get(i);
     }
 
     private String getEducationList() {
