@@ -84,6 +84,6 @@ public class Resume {
     @Override
     public String toString(){
         return getName()+"\n"+getEmail()+"\n\nEducation\n"
-                +getEducationList()+"\nExperience\n"+getExperienceList()+"\nSkills\n"+getSkillList();
+                +getEducationList()+"Experience\n"+getExperienceList()+"Skills\n"+getSkillList();
     }
 }
