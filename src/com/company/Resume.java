@@ -1,10 +1,12 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Resume {
     private String name;
     private String email;
+    private String phone;
     private ArrayList<Education> educationList = new ArrayList<>();
     private ArrayList<Experience> experiences = new ArrayList<>();
     private ArrayList<Skill> skills = new ArrayList<>();
@@ -33,6 +35,14 @@ public class Resume {
         this.email = email;
     }
 
+    public String getPhone(){
+        return phone;
+    }
+
+    public void setPhone(String phone){
+        this.phone = phone;
+    }
+
     public void addEducation(Education edu){
         educationList.add(edu);
     }
@@ -55,6 +65,24 @@ public class Resume {
 
     public Skill getSkill(int i){
         return skills.get(i);
+    }
+
+    public void changeInfo(String newInfo){
+        Scanner input = new Scanner(System.in);
+        switch (newInfo.toLowerCase()){
+            case "name":
+                System.out.print("Please enter the new name: ");
+                setName(input.nextLine());
+                break;
+            case "email":
+                System.out.print("Please enter the new email: ");
+                setEmail(input.nextLine());
+                break;
+            case "phone":
+                System.out.print("Please enter the new phone number: ");
+                setPhone(input.nextLine());
+                break;
+        }
     }
 
     private String getEducationList() {
@@ -84,9 +112,10 @@ public class Resume {
         return sb.toString();
     }
 
+
     @Override
     public String toString(){
-        return getName()+"\n"+getEmail()+"\n\nEducation\n"
-                +getEducationList()+"Experience\n"+getExperienceList()+"Skills\n"+getSkillList();
+        return getName()+"\n"+getEmail()+"\n"+getPhone()+"\n\nEducation\n"
+                +getEducationList()+"Experience\n"+getExperienceList()+"\nSkills\n"+getSkillList();
     }
 }
