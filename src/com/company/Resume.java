@@ -115,7 +115,18 @@ public class Resume {
 
     @Override
     public String toString(){
-        return getName()+"\n"+getEmail()+"\n"+getPhone()+"\n\nEducation\n"
-                +getEducationList()+"Experience\n"+getExperienceList()+"\nSkills\n"+getSkillList();
+        String rStr="";
+        rStr = getName()+"\n"+getEmail()+"\n"+getPhone();
+        if(!educationList.isEmpty()){
+            rStr=rStr.concat("\n\nEducation\n"
+                    +getEducationList());
+        }
+        if(!experiences.isEmpty()){
+            rStr=rStr.concat("Experience\n"+getExperienceList());
+        }
+        if(!skills.isEmpty()){
+            rStr=rStr.concat("\nSkills\n"+getSkillList());
+        }
+        return rStr;
     }
 }
