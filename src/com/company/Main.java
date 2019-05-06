@@ -113,12 +113,16 @@ public class Main {
         }//end of parent while
 
         if(!resumes.isEmpty()){
-            int i=1;
-            for (Resume resume : resumes.values()) {
-                System.out.println("=================================================================================");
-                System.out.printf("Resume %d\n",i++);
-                System.out.println(resume.toString());
-            }
+//            int i=1;
+//            for (Resume resume : resumes.values()) {
+//                System.out.println("=================================================================================");
+//                System.out.printf("Resume %d\n",i++);
+//                System.out.println(resume.toString());
+//            }
+            Recruiter recruiter = new Recruiter();
+            System.out.print("Please Enter a skill word to search for: ");
+            recruiter.searchBySkill(kb.nextLine(), resumes);
+            System.out.println(recruiter.getFoundResumeList());
         }else{
             System.out.println("=================================================================================");
             System.out.println("No resumes to show");

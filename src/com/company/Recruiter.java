@@ -15,6 +15,15 @@ public class Recruiter {
         return inqueries.get(resumeName);
     }
 
+    public void searchBySkill(String keyWord, HashMap<String, Resume> resumes){
+        int index =0;
+        for(String resName: resumes.keySet()){
+            if(resumes.get(resName).getSkill(index).getSkillName().equalsIgnoreCase(keyWord)){
+                addFoundResume(resName, resumes.get(resName));
+            }
+        }
+    }
+
     public String getFoundResumeList(){
         String rStr="";//return string
         StringBuilder sb = new StringBuilder(rStr);
