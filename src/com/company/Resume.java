@@ -116,13 +116,13 @@ public class Resume {
     @Override
     public String toString(){
         String rStr="";
-        rStr = getName()+"\n"+getEmail()+"\n"+getPhone();
+        rStr = getName()+"\n"+getEmail()+"\n"+getPhone()+"\n";
         if(!educationList.isEmpty()){
             rStr=rStr.concat("\n\nEducation\n"
                     +getEducationList());
         }
         if(!experiences.isEmpty()){
-            rStr=rStr.concat("Experience\n"+getExperienceList());
+            rStr=rStr.concat("\nExperience\n"+getExperienceList());
         }
         if(!skills.isEmpty()){
             rStr=rStr.concat("\nSkills\n"+getSkillList());

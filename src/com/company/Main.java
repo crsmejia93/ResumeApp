@@ -97,7 +97,7 @@ public class Main {
                     }
                 }//end of experience while
             }else if(!resumes.isEmpty()){
-                System.out.println("Would you like to edit any recently created resume(y/n)? ");
+                System.out.print("Would you like to edit any recently created resume(y/n)? ");
                 answer = input.nextLine();
                 if(answer.equalsIgnoreCase("y")){
                     while(!resumeName.equalsIgnoreCase("q")) {
@@ -115,12 +115,13 @@ public class Main {
         }//end of parent while
 
         if(!resumes.isEmpty()){
-//            int i=1;
-//            for (Resume resume : resumes.values()) {
-//                System.out.println("=================================================================================");
-//                System.out.printf("Resume %d\n",i++);
-//                System.out.println(resume.toString());
-//            }
+            int i=1;
+            for (Resume resume : resumes.values()) {
+                System.out.println("=================================================================================");
+                System.out.printf("Resume %d\n",i++);
+                System.out.println(resume.toString());
+            }
+            System.out.println("\n\n\n");
             Recruiter recruiter = new Recruiter();
             System.out.print("Please Enter a skill word to search for: ");
             recruiter.searchBySkill(input.nextLine(), resumes);
