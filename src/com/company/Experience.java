@@ -7,7 +7,8 @@ public class Experience{
     private String jobTitle;
     private String startDate;
     private String endDate;
-    ArrayList<String> descriptions = new ArrayList<>();
+    private String description;
+    //ArrayList<String> descriptions = new ArrayList<>();
 
     public Experience() {
     }
@@ -17,16 +18,16 @@ public class Experience{
         this.jobTitle = jobTitle;
         this.startDate = startDate;
         this.endDate = endDate;
-        descriptions.add(description);
+        this.description=description;
     }
-    public Experience(String company, String jobTitle, String startDate, String endDate, String description1, String description2) {
-        this.company = company;
-        this.jobTitle = jobTitle;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        descriptions.add(description1);
-        descriptions.add(description2);
-    }
+//    public Experience(String company, String jobTitle, String startDate, String endDate, String description1, String description2) {
+//        this.company = company;
+//        this.jobTitle = jobTitle;
+//        this.startDate = startDate;
+//        this.endDate = endDate;
+//        descriptions.add(description1);
+//        descriptions.add(description2);
+//    }
 
     public String getCompany() {
         return company;
@@ -61,26 +62,26 @@ public class Experience{
     }
 
     public void addDescription(String description) {
-        descriptions.add(description);
+        this.description=description;
     }
 
-    public String getDuties(int i) {
-        return descriptions.get(i);
+    public String getDescription() {
+        return description;
     }
 
-    public String getDescriptionList(){
-        String rStr="";//return String
-        int counter=1;
-        StringBuilder sb = new StringBuilder(rStr);
-        for(String desc: descriptions){
-            sb.append("-Duty"+counter+", "+rStr.concat(desc+"\n"));
-            counter++;
-        }
-        return sb.toString();
-    }
+//    public String getDescriptionList(){
+//        String rStr="";//return String
+//        int counter=1;
+//        StringBuilder sb = new StringBuilder(rStr);
+//        for(String desc: descriptions){
+//            sb.append("-Duty"+counter+", "+rStr.concat(desc+"\n"));
+//            counter++;
+//        }
+//        return sb.toString();
+//    }
     @Override
     public String toString(){
         return getJobTitle()+"\n"+getCompany()+
-                ", "+getStartDate()+"-"+getEndDate()+"\n"+getDescriptionList();
+                ", "+getStartDate()+"-"+getEndDate()+"\n"+getDescription();
     }
 }
